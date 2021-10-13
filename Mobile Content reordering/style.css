@@ -1,0 +1,146 @@
+html {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	background-color: darkviolet;
+}
+
+/* Header*/
+header {
+	margin-top: 20px;
+	color: white;
+	border: 2px solid white;
+	text-align: center;
+}
+
+/*Nav*/
+.flex-nav {
+	border: 2px solid white;
+	margin-top: 40px;
+}
+
+.flex-nav a {
+	color: white;
+	font-weight: 100;
+	letter-spacing: 2px;
+	text-decoration: none;
+	padding: 20px 10px;
+	text-align: center;
+}
+
+.flex-nav a:hover {
+	background-color: black;
+}
+
+/*  Flex properties*/
+.flex-nav ul {
+	display: flex;
+	list-style: none;
+}
+
+.flex-nav li {
+	flex: 3;
+}
+/* Will give the items 3times the empty space than the social icons*/
+.flex-nav .social {
+	flex: 1;
+}
+
+/* Responsive Media Queries*/
+
+@media all and (max-width: 1000px) {
+	.flex-nav a {
+		color: red;
+	}
+
+	.flex-nav ul {
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	.flex-nav li {
+		flex: 1 1 50%;
+	}
+
+	.flex-nav .social {
+		flex: 1 1 25%;
+	}
+}
+
+/*Hero Image*/
+
+.hero {
+	border: 2px solid white;
+	display: flex;
+}
+.hero img {
+	display: block;
+	margin: auto;
+	width: 50%;
+	margin: 20px auto 20px auto;
+}
+
+/*Description*/
+
+.description {
+	text-align: center;
+	color: white;
+	margin-bottom: 20px;
+}
+
+/*Form*/
+.form {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+/*Footer*/
+footer {
+	text-align: center;
+}
+
+@media all and (max-width: 500px) {
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.flex-nav a {
+		color: orange;
+	}
+
+	.flex-nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	.flex-nav li {
+		flex: 1 1 100%;
+	}
+
+	.flex-nav {
+		order: -1;
+	}
+
+	header {
+		order: 0;
+	}
+
+	.description {
+		order: 1;
+	}
+
+	.form {
+		order: 2;
+	}
+
+	.hero {
+		order: 3;
+	}
+
+	footer {
+		order: 4;
+	}
+}
